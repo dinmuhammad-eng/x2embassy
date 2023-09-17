@@ -1,0 +1,30 @@
+<!-- <div [class.half-opacity]="isDialogOpen" style="background-image: url('assets/images/best5.jpg'); min-height: 100vh; height: auto;"></div> -->
+<div [class.half-opacity]="isDialogOpen" >
+  <div class="logo">
+    <img src="assets/images/yes.png" alt="Not loaded">
+  </div>
+
+  <div class="ar " [class.fade-out]="isLoading" [class.disable-hover]="disableHover">
+    Welcome to the online passport system of the Embassy of Afghanistan! Here, you can register yourself and
+     schedule an appointment for your passport .
+     Please do not pay your fee online. You will be able to do so on the day of your appointment.
+    <br> <br>
+    ‌د استناف محکمې یوه قاضي د پرېکړې د اورولو پرمهال وویل "دا ګواښ ريښتنی دی، چې ښايي‌ کډوال له روانډا نه بېرته خپلو
+    هېوادونو ته واستول شي او هلته یې ژوند له خطر سره ممخ شي.‌ داسې حال
+    <br><br>
+    اما دولت‌ها به دلیل مشکلات زیادی که دارند از این صندوق به عنوان قلک استفاده کرده و هر وقت نیاز مالی داشته باشند با
+    مجوزی از سوی آیت الله خامنه‌ای از صندوق برداشت می‌کنند.
+
+  </div>
+
+  <div class="home" [class.fade-out]="isLoading">
+    <button class="btn1" [class.disable-hover]="isDialogOpen" (click)="signup()"> Register</button>
+    <button class="btn2" [class.disable-hover]="isDialogOpen" (click)="logIn()"> Log In </button>
+  </div>
+  
+  
+</div>
+
+<div *ngIf="isLoading" class="loader-overlay">
+  <div class="loader"></div>
+</div>
